@@ -50,11 +50,11 @@ export async function getInitialState(): Promise<{
       settings: defaultSettings,
     };
   }
-  const currentUser = await fetchUserInfo();
+  // const currentUser = await fetchUserInfo();
   return {
     // @ts-ignore
     fetchUserInfo,
-    currentUser,
+    // currentUser,
     settings: defaultSettings,
   };
 

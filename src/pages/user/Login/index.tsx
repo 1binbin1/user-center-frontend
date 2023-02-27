@@ -1,16 +1,12 @@
 import {
-  AlipayCircleOutlined,
   LockOutlined,
-  MobileOutlined,
-  TaobaoCircleOutlined,
   UserOutlined,
-  WeiboCircleOutlined,
 } from '@ant-design/icons';
-import {Alert, Button, Divider, message, Space, Tabs} from 'antd';
+import {Alert, Divider, message, Space, Tabs} from 'antd';
 import React, {useState} from 'react';
-import {ProFormCaptcha, ProFormCheckbox, ProFormText, LoginForm} from '@ant-design/pro-form';
+import {ProFormCheckbox, ProFormText, LoginForm} from '@ant-design/pro-form';
 import {history, useModel} from 'umi';
-import {PLANET_LINK, SYSTEM_LOGO} from '@/constants';
+import {SYSTEM_LOGO} from '@/constants';
 import Footer from '@/components/Footer';
 import {login} from '@/services/ant-design-pro/api';
 import styles from './index.less';
@@ -61,6 +57,7 @@ const Login: React.FC = () => {
         history.push(redirect || '/');
         return;
       }
+
 
       setUserLoginState(user);
     } catch (error) {
@@ -132,7 +129,7 @@ const Login: React.FC = () => {
               marginBottom: 24,
             }}
           >
-            <Space split={<Divider type="vertical" />}>
+            <Space split={<Divider type="vertical"/>}>
               <ProFormCheckbox noStyle name="autoLogin">
                 自动登录
               </ProFormCheckbox>
@@ -141,7 +138,7 @@ const Login: React.FC = () => {
                 style={{
                   float: 'right',
                 }}
-                href={PLANET_LINK}
+                // href={PLANET_LINK}
                 target="_blank"
                 rel="noreferrer"
               >

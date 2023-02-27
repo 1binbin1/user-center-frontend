@@ -124,7 +124,7 @@ const Register: React.FC = () => {
                   size: 'large',
                   prefix: <UserOutlined className={styles.prefixIcon}/>,
                 }}
-                placeholder="请输入星球编号"
+                placeholder="请输入用户编号"
                 rules={[
                   {
                     required: true,

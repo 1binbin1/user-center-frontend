@@ -1,11 +1,14 @@
 import {
+  AlipayCircleOutlined,
   LockOutlined,
+  MobileOutlined,
+  TaobaoCircleOutlined,
   UserOutlined,
-
+  WeiboCircleOutlined,
 } from '@ant-design/icons';
-import {Alert, Divider, message, Space, Tabs} from 'antd';
+import {Alert, Button, Divider, message, Space, Tabs} from 'antd';
 import React, {useState} from 'react';
-import {ProFormCheckbox, ProFormText, LoginForm} from '@ant-design/pro-form';
+import {ProFormCaptcha, ProFormCheckbox, ProFormText, LoginForm} from '@ant-design/pro-form';
 import {history, useModel} from 'umi';
 import {PLANET_LINK, SYSTEM_LOGO} from '@/constants';
 import Footer from '@/components/Footer';
@@ -70,18 +73,13 @@ const Login: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        {/*登录表单*/}
         <LoginForm
           logo={<img alt="logo" src={SYSTEM_LOGO}/>}
-          // logo={<img alt="logo" src="/logo.png"/>}
           title="用户中心库"
-          // subTitle={<a href={PLANET_LINK} target="_blank" rel="noreferrer">建立完整的用户信息库</a>}
-          subTitle={"建立完整的用户信息库"}
+          subTitle={"建立完整的用户中心库"}
           initialValues={{
             autoLogin: true,
           }}
-
-          /*提交登录请求*/
           onFinish={async (values) => {
             await handleSubmit(values as API.LoginParams);
           }}
@@ -153,7 +151,6 @@ const Login: React.FC = () => {
           </div>
         </LoginForm>
       </div>
-      {/*顶部信息*/}
       <Footer/>
     </div>
   );
